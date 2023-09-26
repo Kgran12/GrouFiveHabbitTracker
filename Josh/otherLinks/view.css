@@ -1,0 +1,112 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: hsl(230, 90%, 61%);
+  --white: hsl(0, 0%, 90%);
+}
+
+
+
+#headerLeft a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+#headerLeft h1 {
+  padding: 10px;
+}
+#headerLeft img {
+  width: 45px;
+  height: auto;
+}
+
+header {
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  box-shadow: 0px 2px 50px #000;
+}
+header h1 {
+  color: var(--primary);
+}
+
+nav {
+  color: white;
+  
+}
+
+ul {
+  color: white;
+  display: flex;
+}
+
+li {
+  list-style: none;
+}
+li a {
+  margin: 20px;
+  color: white;
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* main {
+  margin: 20px 8%;
+} */
+body {
+  background-color: var(--primary);
+  font-family: sans-serif;
+}
+
+/* ^^ basic css format ^^ */
+
+.center {
+  padding: 20px;
+  text-align: center;
+  color: var(--white);
+}
+
+#flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#flex a {
+  width: fit-content;
+  
+}
+#flex section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dos {
+  background-color: rgb(193, 214, 214);
+  width: 40vw;
+  height: 90vh;
+  position: relative;
+  border-radius: 20px;
+  margin: 0 8%; 
+  /* NEED A BETTER WAY TO CENTER THESE PROPERLY */
+
+}
+
+#donts {
+  background-color: bisque;
+  width: 40vw;
+  height: 90vh;
+  border-radius: 20px;
+  margin: 0 8%; 
+  /* NEED A BETTER WAY TO CENTER THESE PROPERLY */
+
+}
+
+

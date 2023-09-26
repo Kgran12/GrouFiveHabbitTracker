@@ -1,0 +1,140 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: hsl(230, 87%, 55%);
+  --dark: hsl(230, 53%, 23%);
+  --white: hsl(0, 0%, 90%);
+}
+
+
+
+#headerLeft a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+#headerLeft h1 {
+  padding: 10px;
+}
+#headerLeft img {
+  width: 45px;
+  height: auto;
+}
+
+header {
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  box-shadow: 0px 2px 50px #000;
+}
+header h1 {
+  color: var(--primary);
+}
+
+nav {
+  color: white;
+  
+}
+
+ul {
+  color: white;
+  display: flex;
+}
+
+li {
+  list-style: none;
+}
+li a {
+  margin: 20px;
+  padding: 5px 10px;
+  color: white;
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+main {
+  margin: 20px 8%;
+}
+body {
+  background-color: var(--dark);
+  font-family: sans-serif;
+}
+
+main h1 {
+  font-size: 5em;
+  color: var(--white);
+  margin: 100px 0 70px 40px;
+}
+
+main p {
+  width: 65%;
+  color: var(--white);
+  font-size: 1.3em;
+  line-height: 1.5em;
+  margin-top: 20px;
+}
+
+#secondP {
+  margin: 50px 0 30px;
+  font-size: 1.4em;
+  line-height: 1.5em;
+}
+
+#viewCard {
+  border-radius: 7px;
+  border: none;
+  background-color: var(--white);
+}
+
+.flex {
+  display: flex;
+}
+
+#addBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 65px;
+  height: 65px;
+  background: radial-gradient(at 10% 90%, hsl(203, 90%, 59%), hsl(263, 90%, 59%), hsl(323, 90%, 59%));
+  border-radius: 50%;
+  font-size: 20px;
+  color: var(--white);
+  text-decoration: none;
+  margin: 20px 15px;
+}
+
+#viewBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  width: 165px;
+  height: 65px;
+  background-color: hsla(175, 90%, 60%, 0.08);
+  letter-spacing: 0.08em;
+  border-image: linear-gradient(160deg, hsl(196, 90%, 60%), hsl(135, 70%, 50%)) 30;
+  border-width: 3px;
+  border-style: solid;
+  font-size: 20px;
+  color: var(--white);
+  text-decoration: none;
+  margin: 20px 15px;
+}
+
+
+/* TODO: */
+    /* make the nav links have an active state and a hover effect. DONT FORGET TO ADD TO ALL OTHER PAGES TOO */
+    /* on the home page, (give both buttons a shadow??) give the view button an animation/hover state when hovered. */
+    /* make a better card maker display when user clicks + */
+    /* make a better Do's and Don'ts display. */
