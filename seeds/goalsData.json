@@ -19,5 +19,12 @@
     "date": "8-5-23",
     "completed": false,
     "id": 3
+  },
+  {
+    "name": "Self Care",
+    "description": "I will treat myself every Thursday.",
+    "date": "3-2-23",
+    "completed": true,
+    "id": 4
   }
 ]
