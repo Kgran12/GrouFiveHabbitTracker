@@ -48,3 +48,5 @@ modelName: 'user',
 }
 
 );
+
+module.exports = User;
