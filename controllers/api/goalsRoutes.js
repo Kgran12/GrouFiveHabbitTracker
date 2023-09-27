@@ -2,7 +2,17 @@ const router = require('express').Router();
 const { Goals } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.post('/', withAuth, async (req, res) => {
+router.get('/goals', async (req, res) => {
+    try {
+        const goalsData = await Goals.findAll();
+        res.status(200).json(goalsData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+
+router.post('/goals', withAuth, async (req, res) => {
     try {
         const newGoals = await Goals.create({
             ...req.body,
@@ -14,7 +24,7 @@ router.post('/', withAuth, async (req, res) => {
     }
 });
 
-router.delete('/:id', withAuth, async(req, res) => {
+router.delete('/goals/:id', withAuth, async(req, res) => {
     try {
         const projectData = await Project.destroy({
             where: {
