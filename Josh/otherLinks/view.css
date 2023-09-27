@@ -74,39 +74,3 @@ body {
   color: var(--white);
 }
 
-#flex {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-#flex a {
-  width: fit-content;
-  
-}
-#flex section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#dos {
-  background-color: rgb(193, 214, 214);
-  width: 40vw;
-  height: 90vh;
-  position: relative;
-  border-radius: 20px;
-  margin: 0 8%; 
-  /* NEED A BETTER WAY TO CENTER THESE PROPERLY */
-
-}
-
-#donts {
-  background-color: bisque;
-  width: 40vw;
-  height: 90vh;
-  border-radius: 20px;
-  margin: 0 8%; 
-  /* NEED A BETTER WAY TO CENTER THESE PROPERLY */
-
-}
-
-

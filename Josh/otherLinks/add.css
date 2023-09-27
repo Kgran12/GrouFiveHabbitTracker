@@ -5,8 +5,10 @@
 }
 
 :root {
+  --dark: hsl(230, 53%, 23%);
   --primary: hsl(230, 90%, 61%);
   --white: hsl(0, 0%, 90%);
+  --cardColor: rgb(189, 185, 192);
 }
 
 
@@ -62,7 +64,9 @@ li a {
   margin: 20px 8%;
 } */
 body {
-  background-color: var(--primary);
+  background: url(../assets/images/AddCardBackground.png);
+  background-size: cover;
+  background-position: center;
   font-family: sans-serif;
 }
 
@@ -77,13 +81,31 @@ body {
   left: 50%;
   width: 620px;
   height: 735px;
-  background-color: aquamarine;
+  background-color: var(--cardColor);
   overflow: hidden;
-  border: 5px solid aquamarine;
+  border: 1px solid var(--cardColor);
   border-radius: 20px;
+  backdrop-filter: blur(15px);
+  background: transparent;
+  padding: 30px;
 }
+
+#flexCol {
+  display: flex;
+  flex-direction: column;
+}
+#flexCol input {
+  margin: 5px 0;
+}
+
 #card img {
   overflow: hidden;
 }
 
+#titleInput {
+  border: none;
+}
 
+#descInput {
+  border: none;
+}
