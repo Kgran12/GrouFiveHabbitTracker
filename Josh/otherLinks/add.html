@@ -26,12 +26,18 @@
 
   <main>
     <div id="card">
-      <img src="https://via.placeholder.com/755x540" alt="img">
+      <img id="displayImage" alt="User provided image" style="max-width: 500px; display: none;">
+
+      <input type="text" id="imageUrlInput" placeholder="Paste your image URL here">
+      <button onclick="updateImage()">Display Image</button>
+
+      
       <div id="flexCol">
         <input class="search-bar" type="text" placeholder="Title" id="titleInput">
-        <input class="search-bar" type="text" placeholder="Description" id="descInput">
+        <textarea name="Text1" cols="15" rows="5" placeholder="Description" ></textarea>
       </div>
     </div>
   </main>
+  <script src="./add.js"></script>
 </body>
 </html>
