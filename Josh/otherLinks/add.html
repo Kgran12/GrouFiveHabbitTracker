@@ -17,19 +17,29 @@
       <nav>
       <ul>
         <li><a href="../index.html">Home</a></li>
-        <li><a href="#">Do's</a></li>
-        <li><a href="#">Don'ts</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="./add.html">Add Card</a></li>
+        <li><a href="./view.html">Do's / Don'ts</a></li>
+        <li><a href="#">Log Out</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <div id="card">
-      <img src="https://via.placeholder.com/1940x540" alt="img">
-      <input class="search-bar" type="text" placeholder="Title">
-      <input class="search-bar" type="text" placeholder="Description">
+      <img id="displayImage" alt="User provided image" style="max-width: 500px; display: none;">
+
+      <input type="text" id="imageUrlInput" placeholder="Paste your image URL here">
+      <button onclick="updateImage()">Display Image</button>
+
+      
+      <div id="flexCol">
+        <input class="search-bar" type="text" placeholder="Title" id="titleInput">
+        <textarea name="Text1" cols="15" rows="5" placeholder="Description" ></textarea>
+        <a href="#">Add To Do's</a>
+        <a href="#">Add To Don'ts</a>
+      </div>
     </div>
   </main>
+  <script src="./add.js"></script>
 </body>
 </html>
