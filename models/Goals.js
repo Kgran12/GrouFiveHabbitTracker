@@ -11,19 +11,19 @@ Goals.init(
         primaryKey: true,
         autoIncrement: true,
     },
-    goal_name: {
+    name: {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    goal_description: {
+    description: {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    goal_date: {
+    date: {
         type: DataTypes.DATE,
         allowNull: false,
     },
-    goal_completed: {
+    completed: {
         type: DataTypes.BOOLEAN,
         allowNull: false,
     },
