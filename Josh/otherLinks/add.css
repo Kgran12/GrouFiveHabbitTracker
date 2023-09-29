@@ -5,6 +5,7 @@
 }
 
 :root {
+  --dark: hsl(230, 53%, 23%);
   --primary: hsl(230, 90%, 61%);
   --white: hsl(0, 0%, 90%);
 }
@@ -62,8 +63,12 @@ li a {
   margin: 20px 8%;
 } */
 body {
-  background-color: var(--primary);
+  overflow-x: hidden;
+  background: url(../assets/images/addCardBg.png);
+  background-size: cover;
+  background-position: center;
   font-family: sans-serif;
+  height: 100vh;
 }
 
 /* ^^ basic css format ^^ */
@@ -75,15 +80,63 @@ body {
   transform: translate(-50%, 0%);
   top: 100px;
   left: 50%;
-  width: 620px;
-  height: 735px;
-  background-color: aquamarine;
+  /* width: 620px; */
+  width: fit-content;
+  height: fit-content;
   overflow: hidden;
-  border: 5px solid aquamarine;
+  border: 1px solid rgb(189, 185, 192);
   border-radius: 20px;
+  backdrop-filter: blur(15px);
+  background: transparent;
+  padding: 30px;
 }
+
+#flexCol {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+#flexCol input {
+  margin: 5px 0;
+}
+
 #card img {
   overflow: hidden;
+  max-width: fit-content;
+  max-height: 480px;
+  padding-bottom: 10px;
 }
 
+#titleInput, textarea {
+  padding: 5px;
+  font-size: 1.2em;
+  border: none;
+  outline: none;
+}
+#imageUrlInput {
+  padding: 5px 0 5px 5px;
+  border: none;
+  outline: none;
+}
+textarea {
+  height: auto;
+  max-height: 50vh;
+  margin: 0px 0 15px;
+}
+#titleInput:focus-visible, textarea:focus-visible, #imageUrlInput:focus-visible {
+  background-color: var(--white);
+}
 
+button {
+  padding: 3px;
+}
+
+#flexCol a {
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--white);
+  background-color: hsl(244, 51%, 32%);
+  margin: 5px 0;
+  border-radius: 10px;
+}
