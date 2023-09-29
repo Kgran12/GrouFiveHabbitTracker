@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Goals } = require('../models');
+const { Goals, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -24,27 +24,28 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/goals/:id'), async (req, res) => {
+router.get('/goals/:id', async (req, res) => {
     try {
-        const goalsData = await Goals.findbyPk(req.params.id, {
-            include: [
-                {
-                    model: User,
-                    attributes: ['name'],
-                },
-            ],
-        });
-
-        const goals = goalsData.get({ plain: true });
-
-        res.render('goals', {
-            ...goals,
-            logged_in: req.session.logged_in
-        });
+      const goalsData = await Goals.findByPk(req.params.id, {
+        include: [
+          {
+            model: User,
+            attributes: ['name'],
+          },
+        ],
+      });
+  
+      const goals = goalData.get({ plain: true });
+  
+      res.render('goals', {
+        ...goals,
+        logged_in: req.session.logged_in
+      });
     } catch (err) {
-        res.status(500).json(err);
+      res.status(500).json(err);
     }
-};
+  });
+
 
 router.get('/profile', withAuth, async (req, res) => {
     try {
@@ -53,7 +54,7 @@ router.get('/profile', withAuth, async (req, res) => {
             include: [{ model: Goals }],
         });
 
-        const user = UserData.get({ plain: true });
+        const user = userData.get({ plain: true });
 
         res.render('profile', {
             ...user,

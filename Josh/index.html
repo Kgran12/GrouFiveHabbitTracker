@@ -5,10 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/style.css">
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-  <title>Habbit Breaker</title>
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+  <title>Habbit Maker</title>
 </head>
 <body>
-  <div id="cursor"></div>
+  
   <header>
     <div id="headerLeft">
       <a href="./index.html">
@@ -25,12 +29,26 @@
       </ul>
     </nav>
   </header>
-
+  
+  <div id="svg">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1366 768" style="enable-background:new 0 0 1366 768;" xml:space="preserve">
+    <style type="text/css">
+    	.st0{fill:#E6E6E6;}
+    </style>
+    <g>
+    	<ellipse transform="matrix(0.9448 -0.3276 0.3276 0.9448 37.1536 435.1601)" class="st0" cx="1310.09" cy="107.31" rx="386.65" ry="346.87"/>
+    </g>
+    </svg>
+  </div>
+  <div id="manOnLaptop">
+    <img src="./assets/images/ManAtComputer.png" alt="Man Sitting down on a laptop.">
+  </div>
+  
   <main>
     <section id="mainPage">
-      <h1>Our Goal</h1>
-      <p>This app designed for ambitious people to knock down their goals <i>and</i> bad habbits. <br>Do you ever have goals that you want to achieve or habbits you want to break? Habbit Maker is here so you don't have to feel overwhelmed by little tasks you want to get done, but might not mean enough to remember. We're here to help you anchor your visions.</p>
-      <p id="secondP">Create dynamic mood boards, add images, and craft a visual narrative that resonates with your soul. <br>Whether you're brainstorming a new project, envisioning a dream space, or just seeking a creative outlet - start your journey here.</p>
+      <h1 style="--i:1">Our Goal</h1>
+      <p>This app is designed for ambitious people that want to build up their goals <i>and</i> break their bad habbits. <br>Do you ever have goals that you want to achieve or habbits you want to break? Habbit Maker is here so you don't have to feel overwhelmed by little tasks you want to get done, but might not mean enough to remember. We're here to help you anchor your visions.</p>
+      <p id="secondP">Create mood boards, add images, and craft a visual narrative that resonates to your liking. <br>Whether you're brainstorming a new project, or envisioning a dream space - start your journey here.</p>
       <div class="flex">
         <a href="./otherLinks/add.html" id="addBtn"><i class='bx bx-plus'></i></a>
         <a href="./otherLinks/view.html" id="viewBtn">View</a>
