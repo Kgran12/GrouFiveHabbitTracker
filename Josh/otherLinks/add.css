@@ -63,10 +63,12 @@ li a {
   margin: 20px 8%;
 } */
 body {
-  background: url(../assets/images/AddCardBackground.png);
+  overflow-x: hidden;
+  background: url(../assets/images/addCardBg.png);
   background-size: cover;
   background-position: center;
   font-family: sans-serif;
+  height: 100vh;
 }
 
 /* ^^ basic css format ^^ */
@@ -80,7 +82,7 @@ body {
   left: 50%;
   /* width: 620px; */
   width: fit-content;
-  height: 735px;
+  height: fit-content;
   overflow: hidden;
   border: 1px solid rgb(189, 185, 192);
   border-radius: 20px;
@@ -92,6 +94,7 @@ body {
 #flexCol {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
 }
 #flexCol input {
   margin: 5px 0;
@@ -105,8 +108,35 @@ body {
 }
 
 #titleInput, textarea {
-  border: none;
   padding: 5px;
   font-size: 1.2em;
+  border: none;
+  outline: none;
+}
+#imageUrlInput {
+  padding: 5px 0 5px 5px;
+  border: none;
+  outline: none;
+}
+textarea {
+  height: auto;
+  max-height: 50vh;
+  margin: 0px 0 15px;
+}
+#titleInput:focus-visible, textarea:focus-visible, #imageUrlInput:focus-visible {
+  background-color: var(--white);
 }
 
+button {
+  padding: 3px;
+}
+
+#flexCol a {
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--white);
+  background-color: hsl(244, 51%, 32%);
+  margin: 5px 0;
+  border-radius: 10px;
+}
