@@ -5,6 +5,7 @@
 }
 
 :root {
+  --dark: hsl(230, 53%, 23%);
   --primary: hsl(230, 90%, 61%);
   --white: hsl(0, 0%, 90%);
 }
@@ -58,19 +59,32 @@ li a {
   font-weight: 600;
 }
 
-/* main {
-  margin: 20px 8%;
-} */
 body {
-  background-color: var(--primary);
+  background: linear-gradient(var(--dark) 60%, #000);
+  height: 100vh;
   font-family: sans-serif;
 }
 
 /* ^^ basic css format ^^ */
 
-.center {
+main h1 {
   padding: 20px;
   text-align: center;
   color: var(--white);
 }
 
+#DosAndDonts {
+  padding: 20px 8%;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  padding: 10px;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px 40px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+}
