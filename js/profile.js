@@ -2,7 +2,7 @@ const newFormHandler = async (event) => {
     event/preventDefault();
 
     const name = document.querySelector('#goals-name').value.trim();
-    const description = document.querySelector('#goals-desc').value.trim();
+    const description = document.querySelector('#goals-description').value.trim();
     const date = document.querySelector('#goals-date').value.trim();
     const completed = document.querySelector('#goals-completed').value.trim();
 
