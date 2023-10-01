@@ -36,12 +36,14 @@ router.get('/goal/:id', async (req, res) => {
       });
   
       const goal = goalData.get({ plain: true });
+      console.log(goal)
   
-      res.render('goal', {
-        ...goal,
+      res.render('goals', {
+        goal,
         logged_in: req.session.logged_in
       });
     } catch (err) {
+        console.log(err);
       res.status(500).json(err);
     }
   });
@@ -57,7 +59,7 @@ router.get('/profile', withAuth, async (req, res) => {
         const user = userData.get({ plain: true });
 
         res.render('profile', {
-            ...user,
+            user,
             logged_in: true
         });
     } catch (err) {
