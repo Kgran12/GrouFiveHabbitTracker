@@ -1,13 +1,13 @@
 <div class="row">
     <div class="col-auto">
-        <h2>Welcome to Habbit Maker, {{username}}!</h2>
+        <h2>Welcome to Habbit Maker, {{user}}!</h2>
     </div>
 </div>
-<div class="row">
+<div class="row" id="card">
     <div class="col-auto">
         <h3>Create a New Goal:</h3>
 
-        <form class="form new-project-form">
+        <form class="form new-goal-form">
             <div class="form-group">
                 <label for="goal-name">Goal Name:</label>
                 <input type="text" class="form-control" id="goal-name" placeholder="Enter Goal Name">
@@ -18,8 +18,8 @@
                     placeholder="Enter Goal Description"></textarea>
             </div>
             <div>
-                <label for="goal-start-date">Start Date:</label>
-                <input type="date" class="form-control" id="goaal-start-date" placeholder="Enter Start Date">
+                <label for="goal-date">Start Date:</label>
+                <input type="date" class="form-control" id="goal-date" placeholder="Enter Start Date">
             </div>
             <div>
                 <label for="goal-frequency">completed:</label>
@@ -42,7 +42,6 @@
             <h3>{{goal.name}}</h3>
             <p>{{goal.description}}</p>
             <p>Start Date: {{goal.start_date}}</p>
-            <p>End Date: {{goal.end_date}}</p>
             <p>Completed: {{goal.completed}}</p>
         </div>
     </div>
