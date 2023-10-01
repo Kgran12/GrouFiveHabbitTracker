@@ -43,6 +43,14 @@ nav {
   color: white;
 }
 
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
 ul {
   color: white;
   display: flex;
