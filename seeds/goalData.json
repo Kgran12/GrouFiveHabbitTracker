@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Mental Health",
+    "description": "I want to meditate 1 hour every day for 30 days.",
+    "date": "01-01-2023",
+    "completed": true
+  },
+  {
+    "name": "Fitness",
+    "description": "I want to run 5 miles every day for a year.",
+    "date": "02-09-2023",
+    "completed": false
+  },
+  {
+    "name": "Finance",
+    "description": "I want to save $1000 every month for 12 months.",
+    "date": "09-01-2022",
+    "completed": true
+  }
+]

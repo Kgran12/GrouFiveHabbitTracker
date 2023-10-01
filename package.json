@@ -20,6 +20,6 @@
       "express-handlebars": "^5.2.0",
       "mysql2": "^2.2.5",
       "sequelize": "^6.3.5",
-      "date-fns": "2.30.0"
+      "helmet": "^7.0.0"
     }
   }
