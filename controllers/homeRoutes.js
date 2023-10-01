@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
             ],
         });
 
-        const goals = goalsData.map((goals) => goals.get({ plain: true }));
+        const goals = goalsData.map((goal) => goal.get({ plain: true }));
 
         res.render('homepage', {
             goals,
@@ -24,9 +24,9 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/goals/:id', async (req, res) => {
+router.get('/goal/:id', async (req, res) => {
     try {
-      const goalsData = await Goals.findByPk(req.params.id, {
+      const goalData = await Goals.findByPk(req.params.id, {
         include: [
           {
             model: User,
@@ -35,10 +35,10 @@ router.get('/goals/:id', async (req, res) => {
         ],
       });
   
-      const goals = goalData.get({ plain: true });
+      const goal = goalData.get({ plain: true });
   
-      res.render('goals', {
-        ...goals,
+      res.render('goal', {
+        ...goal,
         logged_in: req.session.logged_in
       });
     } catch (err) {
