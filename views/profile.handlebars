@@ -1,50 +1,48 @@
 <div class="row">
-    <div class="col-auto">
-        <h2>Welcome to Habbit Maker, {{user}}!</h2>
-    </div>
-</div>
-<div class="row" id="card">
-    <div class="col-auto">
-        <h3>Create a New Goal:</h3>
-
-        <form class="form new-goal-form">
-            <div class="form-group">
-                <label for="goal-name">Goal Name:</label>
-                <input type="text" class="form-control" id="goal-name" placeholder="Enter Goal Name">
-            </div>
-            <div>
-                <label for="goal-description">Goal Description:</label>
-                <textarea class="goal-control" id="goal-description" rows="3"
-                    placeholder="Enter Goal Description"></textarea>
-            </div>
-            <div>
-                <label for="goal-date">Start Date:</label>
-                <input type="date" class="form-control" id="goal-date" placeholder="Enter Start Date">
-            </div>
-            <div>
-                <label for="goal-frequency">completed:</label>
-                <input type="text" class="form-control" id="goal-frequency" placeholder="Is Your Goal Completed?">
-            </div>
-            <div class="from new-goal-form">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-        </form>
-    </div>
+  <div class="col-auto">
+    <h2>Welcome, {{name}}!</h2>
+  </div>
 </div>
 
-{{#if goals.length}}
-<div class="col-md-8 goals-list">
-    <h2>Goals:</h2>
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Create a New Goal:</h3>
+
+    <form class="form new-goal-form">
+      <div class="form-group">
+        <label for="goal-name">goal name:</label>
+        <input class="form-input" type="text" id="goal-name" name="goal-name" />
+      </div>
+      <div class="form-group">
+        <label for="goal-completed">goal completed:</label>
+        <input class="form-input" type=checkbox id="goal-completed" name="goal-funding" />
+      </div>
+      <div class="form-group">
+        <label for="goal-desc">description:</label>
+        <textarea class="form-input" id="goal-desc" name="goal-desc"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+  </div>
+
+  {{#if goals.length}}
+  <div class="col-md-6 goal-list">
+    <h3>Current goals:</h3>
 
     {{#each goals as |goal|}}
-    <div class="row mb-4">
-        <div class="col-md-10">
-            <h3>{{goal.name}}</h3>
-            <p>{{goal.description}}</p>
-            <p>Start Date: {{goal.start_date}}</p>
-            <p>Completed: {{goal.completed}}</p>
-        </div>
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/goal/{{goal.id}}">{{goal.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{goal.id}}">DELETE</button>
+      </div>
     </div>
+    {{/each}}
+  </div>
+  {{/if}}
 </div>
 
 <script src="./js/profile.js"></script>

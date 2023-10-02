@@ -4,33 +4,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href='/css/jass.css'>
-  <link rel="stylesheet" href='/css/style.css'>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-  <title>Habbit Maker</title>
+  <title>Fund My Project!</title>
+  <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-  <div class="flex-container">
-  <header id="headerLeft" class ="d-flex justify-content-left">
-      <img src="/images/HabbitMakerBreakerLogoBFinal.png" alt="logo">
-      <h1>Habbit Maker</h1>
-    </div>
-  </header>
-  <nav>
-    {{#if logged_in}}
-    <a href="/profile">Goals</a>
-    <button id="logout">Logout</button>
-    {{else}}
-    <a href="/login">Click here to login or create an account!</a>
-    {{/if}}
-  </nav>
-  <main>
-    <main class="center">
+  <div class="flex-column justify-space-around">
+    <header class="display-flex justify-space-between align-center p-2">
+      <h1>
+        <span role="img" aria-label="money">💸</span>
+        <a href="/">Welcome to Habbit Maker!</a>
+      </h1>
+      <nav>
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <a href="/profile">profile</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+      </nav>
+    </header>
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
       {{{ body }}}
     </main>
     <footer>
-      {{#if logged_in}}
-      <script src="/js/logout.js"></script>
-      {{/if}}
+      
     </footer>
+  </div>
+
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
