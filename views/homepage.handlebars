@@ -1,15 +1,17 @@
 {{#each goals as |goal| }}
-<div class="row mb-4 project">
-    <div class="col-md-12">
-        <h2>
-            <a href="/goal/{{goal.id}}">{{goal.name}}</a>
-        </h2>
-        <p>
-            Created by {{goal.user.name}} on {{goal.date}}
-        </p>
-        <p>
-            {{goal.description}}
-        </p> 
-    </div>
+<div class="row mb-4 goal">
+  <div class="col-md-5">
+    <h2>
+    
+      {{{get_emoji}}}
+      <a href="/goal/{{goal.id}}">{{goal.name}}</a>
+    </h2>
+    <p>Created by {{goal.user.name}} on {{format_date goal.date_created}}</p>
+  </div>
+  <div class="col-md-7">
+    <p>
+      {{goal.description}}
+    </p>
+  </div>
 </div>
 {{/each}}
