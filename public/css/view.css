@@ -94,18 +94,8 @@ main h1 {
   /* justify-content: space-between; */
 }
 .container:hover {
-  box-shadow: inset 16px 16px 32px hsl(230, 10%, 10%), 
+  box-shadow: inset 16px 16px 32px hsl(228, 95%, 45%), 
   inset -16px -16px 32px hsl(230, 10%, 16%);
-}
-
-#DosAndDonts a {
-  text-decoration: none;
-  color: var(--white);
-}
-#DosAndDonts h1 {
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 60px;
 }
 
 .flexCol {

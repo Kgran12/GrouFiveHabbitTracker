@@ -1,5 +1,71 @@
-header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark: hsl(230, 78%, 48%);
+  --primary: hsl(230, 90%, 61%);
+  --white: hsl(0, 0%, 90%);
+}
+
+
+
+#headerLeft a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+#headerLeft h1 {
+  padding: 10px;
+}
+#headerLeft img {
+  width: 45px;
+  height: auto;
+}
+
+header {
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  box-shadow: 0px 2px 50px #000;
+}
+header h1 {
+  color: var(--primary);
+}
+
+nav {
+  color: white;
+  
+}
+
+ul {
+  color: white;
+  display: flex;
+}
+
+li {
+  list-style: none;
+}
+
+
+
+li a {
+  margin: 20px;
+  color: white;
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+body {
+  background-color: hsl(230, 13%, 20%);
+  height: 100vh;
+  font-family: sans-serif;
 }
 
 .no-button {

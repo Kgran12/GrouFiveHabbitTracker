@@ -43,5 +43,5 @@ document
   .addEventListener('submit', newFormHandler);
 
 document
-  .querySelector('.goal-list')
+  .querySelector('#goal-list')
   .addEventListener('click', delButtonHandler);
