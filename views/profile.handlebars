@@ -10,16 +10,16 @@
 
     <form class="form new-goal-form">
       <div class="form-group">
-        <label for="goal-name">goal name:</label>
+        <label for="goal-name">What :</label>
         <input class="form-input" type="text" id="goal-name" name="goal-name" />
       </div>
       <div class="form-group">
-        <label for="goal-completed">goal completed:</label>
-        <input class="form-input" type=checkbox id="goal-completed" name="goal-funding" />
-      </div>
-      <div class="form-group">
-        <label for="goal-desc">description:</label>
+        <label for="goal-desc">Describe what goal you would like to accomplish:</label>
         <textarea class="form-input" id="goal-desc" name="goal-desc"></textarea>
+      </div>
+       <div class="form-group">
+        <label for="goal-completed">What Strategies Will You Use to Complete the Goal?:</label>
+        <input class="form-input" type="text" id="goal-completed" name="goal-funding" />
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-primary">Create</button>
@@ -28,7 +28,7 @@
   </div>
 
   {{#if goals.length}}
-  <div class="col-md-6 goal-list">
+  <div class="col-md-6" id="goal-list">
     <h3>Current goals:</h3>
 
     {{#each goals as |goal|}}

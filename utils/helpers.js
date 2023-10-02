@@ -1,7 +1,6 @@
 module.exports = {
-  format_date: () => {
-    return date.moment().format('MMMM Do YYYY, h:mm:ss a')
-    ;
+  format_date: (date) => {
+
+    return date.toLocaleDateString();
   },
 };
-// new technology added: Moment.js
