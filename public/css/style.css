@@ -43,6 +43,28 @@ nav {
   
 }
 
+h1 img {
+  width: 45px;
+  height: auto;
+  margin-right: 15px;
+}
+
+div h1 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin: 30px ;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+div p {
+  color: black;
+  font-size: 1rem;
+  margin: 20px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif
+}
+
 ul {
   color: white;
   display: flex;
@@ -81,10 +103,4 @@ body {
 .no-button:hover {
   color: #065b83;
   text-decoration: underline;
-}
-
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
 }
