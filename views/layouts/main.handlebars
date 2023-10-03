@@ -12,12 +12,11 @@
 
 <body>
   <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
+    <header class="display-flex justify-space-between align-center p-2" id="headerleft">
       <h1>
-        <a href="/">Habbit Maker</a>
+        <img src="/images/HabbitMakerBreakerLogoBFinal.png" alt="logo"><a href="/">Habbit Maker</a>
       </h1>
       <nav>
-
         {{#if logged_in}}
         <a href="/profile">profile</a> |
         <button class="no-button" id="logout">logout</button>
@@ -26,12 +25,15 @@
         {{/if}}
       </nav>
     </header>
+    <div class ="flex">
+      <h1>Our Goal</h1>
+      <p>This app is designed for ambitious people that want to build up their goals <i>and</i> break their bad habbits. <br>Do you ever have goals that you want to achieve or habbits you want to break? Habbit Maker is here so you don't have to feel overwhelmed by little tasks you want to get done, but might not mean enough to remember. We're here to help you anchor your visions.</p>
+      <p>Create mood boards, add images, and craft a visual narrative that resonates to your liking. <br>Whether you're brainstorming a new project, or envisioning a dream space - start your journey here.</p>
+    </div>
     <main class="container container-fluid mt-5">
-       <img src="../../public/images/HabbitMakerBreakerLogoBFinal.png" alt="logo">
 {{{ body }}}
     </main>
     <footer>
-      
     </footer>
   </div>
 
